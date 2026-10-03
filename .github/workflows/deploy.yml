@@ -25,7 +25,8 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir public
-          cp index.html 404.html robots.txt sitemap.xml .nojekyll public/
+          cp index.html 404.html robots.txt sitemap.xml public/
+          touch public/.nojekyll
           cp -R assets work public/
       - name: Configure Pages
         uses: actions/configure-pages@v5
